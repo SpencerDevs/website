@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpencerDevs</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dd13dde450.js" crossorigin="anonymous"></script>
+    <!-- Stuff -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dd13dde450.js" crossorigin="anonymous"></script>
+    <!--  -->
+</head>
+<body>
+    <div class="spencer">
+        <img id ="avatar">
+        <span style="align-items:center;"><h1 class="author">SpencerDevs</h1></span>
+        <h2 class="skills">| Developer | Editor | Graphics Designer |</h2>
+        <div style="margin-top:30px;">
+            <div class="socials">
+                <h1 class="title">YouTube</h1>
+                <a style="text-decoration: none" href="https://www.youtube.com/channel/UCg-6cvN1EaE1Be06Xj6TWHw" target="_blank"><h1 id="youtube" class="link">SpencerDevs</h1></a>
+            </div>
+            <div class="socials">
+                <h1 class="title">Discord</h1>
+                <a style="text-decoration: none"><h1 id="username" class="link">Username#Tag</h1></a>
+            </div>
+            <div class="socials">
+                <h1 class="title">Slope</h1>
+                <a style="text-decoration: none" href="games/slopegame/" target="_blank"><h1 id="slope" class="link">Slope 3</h1></a>
+            </div>
+            <div class="socials">
+                <h1 class="title">Dino</h1>
+                <a style="text-decoration: none" href="games/dinogame/" target="_blank"><h1 id="dino" class="link">Dino Game</h1></a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $.getJSON('https://api.leaked.wiki/discorduser?id=367987504604774400',
+    function(data) {
+        document.getElementById("avatar").src = data.avatar;
+        document.getElementById("username").innerHTML = data.username + "#" + data.discriminator
+    }
+    )
+</script>
+</html>
